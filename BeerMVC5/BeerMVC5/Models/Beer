@@ -60,7 +60,7 @@ namespace BeerMVC5.Models
                 return false;
             }
         }
-        public virtual ShopModel Shops { get; set; }
+        public virtual Shop Shops { get; set; }
 
 
         public override string ToString()
