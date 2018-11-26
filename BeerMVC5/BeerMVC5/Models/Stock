@@ -20,7 +20,7 @@ namespace BeerMVC5.Models
     [ForeignKey("Shop")]
     public int ShopID { get; set; }
     [Required(ErrorMessage = "Invalid Shop Name")]
-    public ShopModel Shop { get; set; }
+    public Shop Shop { get; set; }
     [Required(ErrorMessage = "Wrong quantity")]
     public int Quantity { get; set; }
     [Required(ErrorMessage = "Price is incorrect!")]
