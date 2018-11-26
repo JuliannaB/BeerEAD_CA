@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace BeerMVC5.Models
+{
+public enum Container { Bottle, Can }
+    public class Beer
+    {
+        [Key]
+        public int BeerID { get; set; }
+        [Required(ErrorMessage = "Invalid Name, please try again")]
+        public string Name { get; set; }
+        [Required(ErrorMessage = "Invalid type, please try again")]
+        public string Style { get; set; }
+        [Required(ErrorMessage = "No brand with that name, please try again")]
+        public string Brand { get; set; }
+        [Required(ErrorMessage = "Invalid doesn't exist, please try again")]
+        public string Brewery { get; set; }
+        [Required(ErrorMessage = "Wrong container")]
+        public Container Container { get; set; }
+        [Required(ErrorMessage = "Invalid capacity")]
+        public int Volume { get; set; }
+        [Required]
+        public double ABV { get; set; }
+        public double Alcohol
+        {
+            get
+            {
+                //using Math.Round and MidpointRouding to round figure to two decimal points
+                return Math.Round((Volume * (ABV / 100)), 2, MidpointRounding.AwayFromZero);
+            }
+            set
+            {
+                value = Alcohol;
+            }
+        }
+        public double Units
+        {
+            get
+            {
+                return Math.Round((Alcohol / 10), 2, MidpointRounding.AwayFromZero);
+            }
+            set
+            {
+                value = Units;
+            }
+        }
+
+        public bool ContainerISValid(Beer ContainerCheck)
+        {
+            if (ContainerCheck.Container == Container.Bottle || ContainerCheck.Container == Container.Can)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public virtual ShopModel Shops { get; set; }
+
+
+        public override string ToString()
+        {
+            return "Beer ID: " + BeerID +
+                   "\nName: " + Name +
+                   "\nStyle: " + Style +
+                   "\nBrand: " + Brand +
+                   "\nBrewery: " + Brewery +
+                   "\nContainer: " + Container +
+                           "\nVolume: " + Volume + " ml" +
+                   "\nABV: " + ABV + "%" +
+                   "\nAlcohol: " + Alcohol + " ml" +
+                   "\nUnits per " + Container + ": " + Units + " units";
+        }
+    }
+}
