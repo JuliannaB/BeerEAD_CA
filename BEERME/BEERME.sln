@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEERME", "BEERME\BEERME.csproj", "{0A20CB13-B1CC-46AC-A5B0-5C567B864E9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEERME.Tests", "BEERME.Tests\BEERME.Tests.csproj", "{D6484A95-83CD-4893-9191-AFDBDE32EF84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A20CB13-B1CC-46AC-A5B0-5C567B864E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A20CB13-B1CC-46AC-A5B0-5C567B864E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A20CB13-B1CC-46AC-A5B0-5C567B864E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A20CB13-B1CC-46AC-A5B0-5C567B864E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6484A95-83CD-4893-9191-AFDBDE32EF84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6484A95-83CD-4893-9191-AFDBDE32EF84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6484A95-83CD-4893-9191-AFDBDE32EF84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6484A95-83CD-4893-9191-AFDBDE32EF84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E773A9FD-98D9-4EAD-B6AC-5ECC4045BC82}
+	EndGlobalSection
+EndGlobal
