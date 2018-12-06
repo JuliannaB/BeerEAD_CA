@@ -8,9 +8,9 @@ using System.Web;
 
 namespace BEERME.DAL
 {
-    public class BEERMEContext : DbContext
+    public class BeerContext : DbContext
     {
-        public BEERMEContext() : base("BEERMEContext")
+        public BeerContext() : base("BeerContext")
         {
 
         }

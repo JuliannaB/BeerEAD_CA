@@ -7,9 +7,9 @@ using BEERME.Models;
 
 namespace BEERME.DAL
 {
-    public class BEERMEInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<BEERMEContext>
+    public class BeerInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<BeerContext>
     {
-        protected override void Seed(BEERMEContext context)
+        protected override void Seed(BeerContext context)
         {
             var beers = new List<Beer>
             {
